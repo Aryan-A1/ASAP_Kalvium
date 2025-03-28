@@ -1,0 +1,101 @@
+.theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .theme-toggle {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #e23636 0%, #f39c12 100%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+  }
+  
+  .theme-toggle.villains-active {
+    background: linear-gradient(90deg, #8e44ad 0%, #c0392b 100%);
+  }
+  
+  .theme-toggle.animate {
+    transform: scale(1.05);
+  }
+  
+  .toggle-handle {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .avengers-active .toggle-handle {
+    transform: translateX(0);
+  }
+  
+  .villains-active .toggle-handle {
+    transform: translateX(150px);
+  }
+  
+  .labels {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    pointer-events: none;
+  }
+  
+  .labels span {
+    font-family: 'Bangers', cursive;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  .avengers-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .villains-label {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  
+  .avengers-active .avengers-label {
+    opacity: 1;
+    transform: translateX(40px);
+  }
+  
+  .avengers-active .villains-label {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  
+  .villains-active .avengers-label {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  
+  .villains-active .villains-label {
+    opacity: 1;
+    transform: translateX(-40px);
+  }
+  
+  
